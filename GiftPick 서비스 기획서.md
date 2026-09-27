@@ -133,3 +133,7 @@ OpenAI API
 추천 결과 화면 출력
     ↓
 네이버 쇼핑 상품 검색
+```
+
+## 8. AI 코딩 도구 사용 증빙
+<img width="764" height="924" alt="image" src="https://github.com/user-attachments/assets/b4d4ba36-1344-4f05-8d7a-96e8737257e2" />
