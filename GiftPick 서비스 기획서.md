@@ -201,4 +201,28 @@ catch (error) {
 - 받는 사람 / 예산 / 관심사: 최대 100자
 
 ## AI 코딩 도구 사용 증빙
-<img width="382" height="462" alt="image" src="https://github.com/user-attachments/assets/b4d4ba36-1344-4f05-8d7a-96e8737257e2" />
+
+- 개발자 모드 F12로 에러 확인 
+     <p> <img width="554" height="336" alt="image" src="https://github.com/user-attachments/assets/6ab92582-b5d7-4680-b0fa-5ee805be5c8a" /></p>
+     오류번호를 전송하였으나 제대로 잡아내지 못함
+
+
+- Vercel Deployments 기록 확인
+    <img width="1903" height="934" alt="image" src="https://github.com/user-attachments/assets/4d0fba3b-0abf-44e2-9e75-e891a29a30cc" />
+
+
+- Deploy logs 확인
+    <img width="1592" height="928" alt="image" src="https://github.com/user-attachments/assets/18e04c57-eab5-4d0d-b961-795b5f4f5403" />
+    웹페이지에 'Error response Error code: 501 Message: Unsupported method ('GET'). Error code explanation: 501 - Server does not support this operation.' 확인
+
+
+- Build & Settings 확인
+  
+  <img width="820" height="694" alt="image" src="https://github.com/user-attachments/assets/f8dc04f0-151f-40f4-96bc-805593f94771" />
+
+  <img width="844" height="784" alt="image" src="https://github.com/user-attachments/assets/1c80fa0e-fd99-48e6-85e0-8e1f6ab3df33" />
+
+  드롭다운에서 python -> other 변경: Python 웹 프레임워크 프로젝트가 아니라 HTML + CSS + JS 정적 프론트 + api/index.py Python API 구조이기 때문.
+   빌드가 필요 없는 HTML/CSS/JS 프로젝트는 Framework Preset을 Other로 선택하고, 루트 디렉터리의 파일을 그대로 서비스할 수 있다
+
+
