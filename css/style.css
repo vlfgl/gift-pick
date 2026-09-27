@@ -573,3 +573,26 @@ Mobile
 
 
 }
+
+/* 네이버 쇼핑 버튼 */
+
+.shopping-button {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 10px 16px;
+
+    border-radius: 8px;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    background-color: #03c75a;
+    color: white;
+
+    transition: opacity 0.2s ease;
+}
+
+.shopping-button:hover {
+    opacity: 0.85;
+}

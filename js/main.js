@@ -88,37 +88,57 @@ Render Result
 
 function renderResult(data) {
 
+    resultTitle.textContent = data.title || "추천 선물";
+    resultDescription.textContent =
+        data.description || "AI가 추천한 선물입니다.";
 
-resultTitle.textContent = data.title || "추천 선물";
-resultDescription.textContent =
-    data.description || "AI가 추천한 선물입니다.";
+    giftList.innerHTML = "";
 
-giftList.innerHTML = "";
+    if (Array.isArray(data.gifts)) {
 
-if (Array.isArray(data.gifts)) {
+        data.gifts.forEach(gift => {
 
-    data.gifts.forEach(gift => {
+            const item = document.createElement("div");
+            item.className = "gift-item";
 
-        const item = document.createElement("div");
-        item.className = "gift-item";
+            const title = document.createElement("h4");
+            title.textContent = gift.name || "추천 선물";
 
-        const title = document.createElement("h4");
-        title.textContent = gift.name || "추천 선물";
+            const description = document.createElement("p");
+            description.textContent =
+                gift.reason || "추천 이유가 없습니다.";
 
-        const description = document.createElement("p");
-        description.textContent =
-            gift.reason || "추천 이유가 없습니다.";
-
-        item.appendChild(title);
-        item.appendChild(description);
-
-        giftList.appendChild(item);
-    });
-}
-
-showOnly(resultContent);
+            item.appendChild(title);
+            item.appendChild(description);
 
 
+            // 네이버 쇼핑 검색 버튼
+            if (gift.search_keyword) {
+
+                const shoppingButton =
+                    document.createElement("a");
+
+                shoppingButton.className = "shopping-button";
+                shoppingButton.textContent =
+                    "🛍️ 네이버 쇼핑에서 상품 보기";
+
+                const shoppingUrl =
+                    "https://search.shopping.naver.com/search/all?query="
+                    + encodeURIComponent(gift.search_keyword);
+
+                shoppingButton.href = shoppingUrl;
+                shoppingButton.target = "_blank";
+                shoppingButton.rel = "noopener noreferrer";
+
+                item.appendChild(shoppingButton);
+            }
+
+
+            giftList.appendChild(item);
+        });
+    }
+
+    showOnly(resultContent);
 }
 
 /* =========================

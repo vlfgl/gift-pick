@@ -72,7 +72,9 @@ class handler(BaseHTTPRequestHandler):
 3. 관심사를 반영하세요.
 4. 선물 추천은 3개만 제시하세요.
 5. 각각의 선물에 추천 이유를 작성하세요.
-6. 한국어로 답변하세요.
+6. 각 선물을 네이버 쇼핑에서 검색할 수 있는 검색어를 하나 작성하세요.
+7. 검색어에는 상품 종류와 사용자가 입력한 예산을 반영하세요.
+8. 한국어로 답변하세요.
 
 반드시 다음 JSON 형식으로만 답변하세요.
 
@@ -82,15 +84,18 @@ class handler(BaseHTTPRequestHandler):
     "gifts": [
         {{
             "name": "선물 이름",
-            "reason": "추천 이유"
+            "reason": "추천 이유",
+            "search_keyword": "네이버 쇼핑 검색어"
         }},
         {{
             "name": "선물 이름",
-            "reason": "추천 이유"
+            "reason": "추천 이유",
+            "search_keyword": "네이버 쇼핑 검색어"
         }},
         {{
             "name": "선물 이름",
-            "reason": "추천 이유"
+            "reason": "추천 이유",
+            "search_keyword": "네이버 쇼핑 검색어"
         }}
     ]
 }}
