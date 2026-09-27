@@ -136,4 +136,38 @@ OpenAI API
 ```
 
 ## 8. AI 코딩 도구 사용 증빙
-<img width="764" height="924" alt="image" src="https://github.com/user-attachments/assets/b4d4ba36-1344-4f05-8d7a-96e8737257e2" />
+<img width="382" height="462" alt="image" src="https://github.com/user-attachments/assets/b4d4ba36-1344-4f05-8d7a-96e8737257e2" />
+
+## 9. 실패 처리 중 사용자에게 안내 메시지 제공
+① 빈 입력 처리 ✅
+
+```text
+function validateInput(recipient, budget, interest) {
+    if (!recipient || !budget || !interest) {
+        errorText.textContent =
+            "받는 사람, 예산, 관심사를 모두 입력해주세요.";
+        showOnly(errorMessage);
+        return false;
+    }
+    return true;
+}
+```
+필수값이 비어 있으면 사용자에게 안내 메시지를 보여줌.
+
+② API 오류 처리 ✅
+```text
+if (!response.ok) {
+    throw new Error(
+        `API request failed: ${response.status}`
+    );
+}
+
+그리고 오류가 발생하면:
+
+catch (error) {
+    console.error("Recommendation API error:", error);
+    errorText.textContent =
+        "서버와 통신하는 중 문제가 발생했습니다. 잠시 후 다시 시도해주세요.";
+    showOnly(errorMessage);
+}
+```
