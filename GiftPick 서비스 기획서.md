@@ -226,3 +226,18 @@ catch (error) {
    빌드가 필요 없는 HTML/CSS/JS 프로젝트는 Framework Preset을 Other로 선택하고, 루트 디렉터리의 파일을 그대로 서비스할 수 있다
 
 
+1. 사용자 입력 → JavaScript → 화면 반영
+
+사용자가 입력한 값을 JavaScript가 가져와 fetch()로 Python 백엔드에 전달한다. 백엔드에서 받은 AI 결과를 다시 JavaScript가 받아 HTML 화면에 출력한다.
+
+2. Vercel Serverless Functions
+
+Vercel은 api/index.py를 서버에서 실행할 수 있게 해주는 환경이다. 프론트엔드가 /api로 요청하면 Vercel이 Python 함수를 실행하고, Python이 OpenAI API와 통신한 뒤 결과를 프론트엔드에 전달한다.
+
+3. 환경 변수와 API 키
+
+OpenAI API 키를 JavaScript나 GitHub 코드에 직접 넣으면 다른 사람이 키를 볼 수 있다. 따라서 Vercel 환경 변수에 API 키를 저장하고 Python에서 가져와 사용한다.
+
+4. 로컬 환경과 배포 환경
+
+로컬 환경은 내 컴퓨터에서 코드를 테스트하는 환경이고, 배포 환경은 Vercel을 통해 실제 사용자가 접속하는 환경이다. 로컬에서 기능을 확인한 후 GitHub에 변경사항을 반영하면 Vercel이 다시 배포하고, 배포 후 오류가 발생하면 로그를 확인 → 코드 수정 → 다시 배포하는 방식으로 해결한다.
