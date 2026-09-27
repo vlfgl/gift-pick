@@ -645,6 +645,11 @@ body.dark-mode .tips {
     background-color: #121212;
 }
 
+body.dark-mode .hero-badge {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
 body.dark-mode .section-title h2,
 body.dark-mode .section-title p,
 body.dark-mode .hero h1,
