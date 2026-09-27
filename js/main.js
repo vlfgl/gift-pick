@@ -153,7 +153,7 @@ recommendButton.disabled = true;
 
 try {
 
-    const response = await fetch("/api", {
+    const response = await fetch("/api/recommend", {
         method: "POST",
 
         headers: {
