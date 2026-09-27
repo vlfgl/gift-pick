@@ -107,9 +107,29 @@ Deploy 실행
 ## 환경 변수 설정
 
 OpenAI API 키는 환경 변수로 관리합니다.
-
 OPENAI_API_KEY=your_openai_api_key
+OpenAI API 키를 JavaScript나 GitHub 코드에 직접 넣으면 다른 사람이 키를 볼 수 있어 악의적으로 대량 사용시 과금 문제가 발생한다. 
 
-API 키는 소스 코드나 GitHub 저장소에 직접 입력하지 않습니다.
+
+## 실행
+1. 사용자 입력 → JavaScript → 화면 반영
+   
+  - 사용자가 입력한 값을 JavaScript가 가져와 fetch()로 Python 백엔드에 전달
+  - 백엔드에서 받은 AI 결과를 다시 JavaScript가 받아 HTML 화면에 출력한다.
+
+2. Vercel Serverless Functions
+   
+  - Vercel은 api/index.py를 서버에서 실행할 수 있게 해주는 환경
+  -프론트엔드가 /api로 요청하면 Vercel이 Python 함수를 실행하고, Python이 OpenAI API와 통신한 뒤 결과를 프론트엔드에 전달
+
+3. 로컬 환경과 배포 환경
+
+  - 로컬 환경은 내 컴퓨터에서 코드를 테스트하는 환경이고, 배포 환경은 Vercel을 통해 실제 사용자가 접속하는 환경
+  - 로컬에서 기능을 확인한 후 GitHub에 변경사항을 반영하면 Vercel이 다시 배포하고, 배포 후 오류가 발생하면 로그를 확인 → 코드 수정 → 다시 배포하는 방식으로 해결
 
 
+4. API, 백엔드 
+   - API: 서로 다른 프로그램이 데이터나 기능을 주고받기 위한 통신 방법
+      → 우리 서비스에서는 JavaScript가 Python 백엔드에 선물 정보를 보내고, Python이 AI 결과를 돌려주는 통로.
+   - 백엔드: 사용자가 직접 보는 화면 뒤에서 데이터 처리, API 호출, 인증 등의 작업을 담당하는 부분.
+    → 우리 서비스에서는 api/index.py가 백엔드 역할을 하고 OpenAI API를 호출함.
