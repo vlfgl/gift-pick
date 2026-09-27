@@ -59,8 +59,8 @@ class handler(BaseHTTPRequestHandler):
                 {
                     "error": "입력 내용은 항목별 최대 100자까지 입력할 수 있습니다."
                 }
-            )
-            return
+                )
+                return
 
 
             # -------------------------
