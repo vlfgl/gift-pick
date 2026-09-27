@@ -121,3 +121,5 @@ OpenAI API 키는 환경 변수로 관리합니다.
 OPENAI_API_KEY=your_openai_api_key
 
 API 키는 소스 코드나 GitHub 저장소에 직접 입력하지 않습니다.
+
+
