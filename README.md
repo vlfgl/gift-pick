@@ -111,7 +111,7 @@ OPENAI_API_KEY=your_openai_api_key
 OpenAI API 키를 JavaScript나 GitHub 코드에 직접 넣으면 다른 사람이 키를 볼 수 있어 악의적으로 대량 사용시 과금 문제가 발생한다. 
 
 
-## 실행
+## 과제 목표
 1. 사용자 입력 → JavaScript → 화면 반영
    
   - 사용자가 입력한 값을 JavaScript가 가져와 fetch()로 Python 백엔드에 전달
