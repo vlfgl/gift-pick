@@ -19,6 +19,18 @@
 
 ## 3. 페이지 구성
 
+<img width="470" height="379" alt="image" src="https://github.com/user-attachments/assets/257be4dc-f458-4ab1-bb9f-c91ae282ace2" />
+<img width="467" height="469" alt="image" src="https://github.com/user-attachments/assets/3d4785e3-e369-435e-aeea-e9989fb43812" />
+
+.
+
+<img width="292" height="633" alt="IMG_8136" src="https://github.com/user-attachments/assets/64bf0b16-5526-4f90-b2bb-65b2c3d7033e" />
+<img width="292" height="633" alt="IMG_8137" src="https://github.com/user-attachments/assets/5f2da23d-b2b4-4b31-ac6b-08281ee274ab" />
+
+
+
+
+
 ### 3.1 홈
 
 - 서비스 소개
