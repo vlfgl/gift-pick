@@ -8,7 +8,7 @@ AI를 활용해 받는 사람, 예산, 관심사를 바탕으로 맞춤형 선�
 
 ## 🔗 배포 URL
 
-- Vercel: **[여기에 실제 Vercel 배포 URL 입력]**
+- Vercel: **[https://gift-pick-lb5z2se36-cwp8.vercel.app/]**
 
 ---
 
