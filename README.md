@@ -92,3 +92,44 @@ gift-pick/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
+```
+
+## ⚙️ 기술 스택
+Frontend
+- HTML
+- CSS
+- JavaScript
+  
+Backend
+- Python
+- Vercel Serverless Functions
+  
+AI
+- OpenAI API
+Deployment
+- Vercel
+- GitHub
+
+## 실행 방법
+
+```bash
+git clone [GitHub 저장소 URL]
+cd gift-pick
+pip install -r requirements.txt
+```
+
+## 배포 방법
+
+GitHub 저장소를 Vercel에 연결하고 배포합니다.
+
+GitHub 저장소 연결
+OPENAI_API_KEY 환경 변수 설정
+Deploy 실행
+
+## 환경 변수 설정
+
+OpenAI API 키는 환경 변수로 관리합니다.
+
+OPENAI_API_KEY=your_openai_api_key
+
+API 키는 소스 코드나 GitHub 저장소에 직접 입력하지 않습니다.
