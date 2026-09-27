@@ -144,8 +144,20 @@ AI 응답 지연을 줄이기 위해 다음 방법을 적용할 수 있다.
 
 현재는 로딩 UI를 제공하여 AI 요청이 처리되는 동안 사용자에게 진행 상태를 안내하며, 캐시와 경량 모델은 향후 개선 사항으로 검토한다.
 
-## 9. AI 코딩 도구 사용 증빙
-<img width="382" height="462" alt="image" src="https://github.com/user-attachments/assets/b4d4ba36-1344-4f05-8d7a-96e8737257e2" />
+## 9. 보안 및 향후 확장
+
+### 기능 확장
+
+향후 사용자별 추천 기록, 추천 결과 저장, 상품 정보 연동 등의 기능으로 확장할 수 있다.
+
+### API 키 유출 대응
+
+API 키가 유출된 경우 해당 키를 즉시 폐기하고 새로운 키를 발급한다. 이후 GitHub 등 공개 저장소에 키가 포함되었는지 확인하고 환경 변수를 새로운 키로 변경한다.
+
+### 프레임워크 변경 시 영향
+
+현재는 Vanilla HTML/CSS/JavaScript와 Vercel Python Serverless Functions를 사용한다. 향후 React 등의 프레임워크로 변경할 경우 프론트엔드 구조와 빌드 설정을 수정해야 하며, Python API와의 통신 방식은 유지할 수 있다.
+
 
 ## 10. 실패 처리 중 사용자에게 안내 메시지 제공
 ① 빈 입력 처리 ✅
@@ -186,3 +198,6 @@ catch (error) {
 ### 길이 제한
 
 - 받는 사람 / 예산 / 관심사: 최대 100자
+
+## AI 코딩 도구 사용 증빙
+<img width="382" height="462" alt="image" src="https://github.com/user-attachments/assets/b4d4ba36-1344-4f05-8d7a-96e8737257e2" />
