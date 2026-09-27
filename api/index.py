@@ -47,6 +47,21 @@ class handler(BaseHTTPRequestHandler):
 
                 return
 
+            MAX_LENGTH = 100
+
+            if (
+                len(recipient) > MAX_LENGTH
+                or len(budget) > MAX_LENGTH
+                or len(interest) > MAX_LENGTH
+            ):
+                self.send_json(
+                    400,
+                {
+                    "error": "입력 내용은 항목별 최대 100자까지 입력할 수 있습니다."
+                }
+            )
+            return
+
 
             # -------------------------
             # 3. AI에게 전달할 프롬프트

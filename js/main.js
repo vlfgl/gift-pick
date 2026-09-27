@@ -65,21 +65,28 @@ element.classList.remove("hidden");
 /* =========================
 Empty Input Validation
 ========================= */
-
 function validateInput(recipient, budget, interest) {
+    const MAX_LENGTH = 100;
 
+    if (!recipient || !budget || !interest) {
+        errorText.textContent =
+            "받는 사람, 예산, 관심사를 모두 입력해주세요.";
+        showOnly(errorMessage);
+        return false;
+    }
 
-if (!recipient || !budget || !interest) {
-    errorText.textContent =
-        "받는 사람, 예산, 관심사를 모두 입력해주세요.";
+    if (
+        recipient.length > MAX_LENGTH ||
+        budget.length > MAX_LENGTH ||
+        interest.length > MAX_LENGTH
+    ) {
+        errorText.textContent =
+            "입력 내용은 항목별 최대 100자까지 입력할 수 있습니다.";
+        showOnly(errorMessage);
+        return false;
+    }
 
-    showOnly(errorMessage);
-    return false;
-}
-
-return true;
-
-
+    return true;
 }
 
 /* =========================
